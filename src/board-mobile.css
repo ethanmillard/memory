@@ -1,6 +1,12 @@
 .game {
     margin: auto;
+    width: 900px;
     font-family: Roboto;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
 }
 
 .controls {
@@ -11,11 +17,27 @@
 
 .board {
     margin: auto;
-    width:100%;
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 700px;
+    height: 900px;
+}
+
+.flip {
+    -webkit-perspective: 800;
+    perspective:800;
+    width: 150px;
+    height: 200px;
+    position: relative;
+    margin: 10px;
+}
+
+.memory-card {
+    margin:10px;
+    height:200px;
+    width:150px;
 }
 
 .memory-card.flipped {
@@ -23,14 +45,7 @@
     transform: rotateY(180deg);
 }
 
-.flip {
-    -webkit-perspective: 800;
-    perspective:800;
-    position: relative;
-}
-
 .memory-card {
-    margin:10px;
     width: 100%;
     height: 100%;
     -webkit-transform-style: preserve-3d;
@@ -49,6 +64,7 @@
     font-family: Georgia;
     font-size: 3em;
     text-align: center;
+    line-height: 200px;
 }
 
 .front {
@@ -70,40 +86,11 @@
 
 img {
     border-radius: 10px;
+    height:200px;
+    width:150px;
 }
 
 img:hover {
     cursor: pointer;
     transform: scale(1.01);
-}
-
-@media only screen and (min-width: 600px) {
-    .game {
-        width: 900px;
-    }
-
-    .board {
-        width: 700px;
-        height: 900px;
-    }
-
-    .flip {
-        width: 150px;
-        height: 200px;
-        margin: 10px;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    
-    .board {
-        width: 370px;
-        height: 500px;
-    }
-    
-    .flip {
-        width: 75px;
-        height: 100px;
-        margin: 2px;
-    }
 }
